@@ -287,9 +287,184 @@ for (int i = 1; i <= 3; i++) {
 * *  
 * * *
 ```
+These examples demonstrate how **loops and conditionals** are the building blocks of logic in most Java programs — from **input handling and validation** to **pattern building and searching/filtering data**.
+
+Here is a complete and structured explanation of the **OOP Concepts in Java**, including your provided definitions, Java code examples, and output for each concept:
 
 ---
 
-These examples demonstrate how **loops and conditionals** are the building blocks of logic in most Java programs — from **input handling and validation** to **pattern building and searching/filtering data**.
+### 🔹 **1. Class and Object**
+**Definition:**  
+A **class** is a blueprint or template that defines the structure and behavior (fields and methods) of objects.  
+An **object** is an instance of a class that holds actual values and can invoke methods.
 
-Would you like real-world mini-projects using these concepts (e.g., ATM system, calculator, password validator)?
+**Example:**
+```java
+class Car {
+    String color;
+    void display() {
+        System.out.println("Car color is " + color);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.color = "Red";
+        myCar.display();
+    }
+}
+```
+
+**Output:**
+```
+Car color is Red
+```
+
+---
+
+### 🔹 **2. Inheritance**
+**Definition:**  
+Inheritance allows one class (child) to inherit fields and methods from another class (parent).  
+It promotes code reuse and establishes a parent-child relationship between classes.
+
+**Example:**
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+    }
+}
+```
+
+**Output:**
+```
+Dog barks
+```
+
+---
+
+### 🔹 **3. Polymorphism**
+**Definition:**  
+Polymorphism means "one interface, many forms"—it allows methods to behave differently based on the object.  
+It is achieved via **method overloading** (compile-time) and **method overriding** (runtime).
+
+**Example (Runtime Polymorphism):**
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a1 = new Cat();
+        Animal a2 = new Dog();
+        a1.sound();
+        a2.sound();
+    }
+}
+```
+
+**Output:**
+```
+Cat meows  
+Dog barks
+```
+
+---
+
+### 🔹 **4. Encapsulation**
+**Definition:**  
+Encapsulation is the practice of wrapping data (variables) and code (methods) together as a single unit.  
+It restricts direct access to some of an object’s components using **private** fields and **public getters/setters**.
+
+**Example:**
+```java
+class Person {
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person p = new Person();
+        p.setName("John");
+        System.out.println(p.getName());
+    }
+}
+```
+
+**Output:**
+```
+John
+```
+
+---
+
+### 🔹 **5. Abstraction**
+**Definition:**  
+Abstraction hides complex internal implementation details and only shows essential features to the user.  
+It is implemented using **abstract classes** and **interfaces** in Java.
+
+**Example using Abstract Class:**
+```java
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.draw();
+    }
+}
+```
+
+**Output:**
+```
+Drawing Circle
+```
+
+---
+
+Would you like me to generate this into a downloadable **PDF cheat sheet** now?
